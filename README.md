@@ -32,4 +32,7 @@ cacheSolve <- function(x, ...) {
 week3 peer assignment 2
 r programming
 lexical scoping
-
+jsdf sksfsklfjsd safhsjkfhjafh afjklafakfjaf  afkakfaj alkf afj akljfajfal fjakf jakfjaoaqfjWOQJWFI ALKDJA FIAE FALKFJ AEFQAF OIAJ FOIUF AFA OFUQIU FQAOIFJA IU8UF AKFJA IU QKFJ 
+viva mapua
+haha
+sana kaya pa natin lezzgo guys
