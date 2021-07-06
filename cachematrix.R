@@ -1,6 +1,4 @@
-## This function will allow to create an invertible cache matrix.
-## To cache its inverse, we will use the code makeCachematrix.
-
+## Usually matrix inversion is a costly process and it might help to reverse a matrix instead of continually computing it (there are also alternatives to matrix inversion that we will not discuss here). Your task is to develop a few of functions that cache the opposite of a matrix.
 makeCacheMatrix <- function(x = matrix()) {
     invmtrx<- NULL
     set<- function(y){
@@ -16,10 +14,10 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 
-## The cacheSolve will calculate the inversed matrix (invmtrx)
+## The solution function in R can be used to calculate the inverse of a square matrix. For example, when X is an invertible square matrix, solve(X).
 
 cacheSolve <- function(x, ...) {
-        ## To return to the matrix inverse:
+        
     invmtrx <- x%getInverse()
     if(!is.null(invmtrx)) {
        message("getting cached inverse data")
@@ -29,5 +27,5 @@ cacheSolve <- function(x, ...) {
     invmtrx <- solve(data, ...)
     x$setInverse (invmtrx)
     invmtrx
-	#returned
+	
 }
