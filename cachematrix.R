@@ -1,31 +1,32 @@
-## Usually matrix inversion is a costly process and it might help to reverse a matrix instead of continually computing it (there are also alternatives to matrix inversion that we will not discuss here). Your task is to develop a few of functions that cache the opposite of a matrix.
+## makeCacheMatrix generates a special object "matrix," which can cache its inverse
+## If the inverse is calculated (and the matrix has not changed), the inverse from the cache must be retrieved by the catchesolve
+
 makeCacheMatrix <- function(x = matrix()) {
-    invmtrx<- NULL
+    i <- NULL
     set<- function(y){
 	    x <<- y
-            invmtrx <<- NULL
+            i <<- NULL
     }
     get <- function() x
-    setInverse <- function(inverse) invmtrx <<- inverse
-    getInverse<-function() invmtrx 
-    list(set= set, get= get, 
-	 setInverse = setInverse, getInverse= getInverse)
+    setInverse <- function(inverse) i <<- inverse
+    getInverse<-function() i 
+    list(set = set, get = get, 
+	 setInverse = setInverse, getInverse = getInverse)
     }
 
-
-
-## The solution function in R can be used to calculate the inverse of a square matrix. For example, when X is an invertible square matrix, solve(X).
+## This function calculates the inverse of the special "matrix" of makeCacheMatrix
+## The solution function in R can be used to calculate the reverse of a square matrix
 
 cacheSolve <- function(x, ...) {
         
-    invmtrx <- x%getInverse()
-    if(!is.null(invmtrx)) {
-       message("getting cached inverse data")
-       return (invmtrx)
+    i <- x%getInverse()
+    if(!is.null(i)) {
+       message("getting cached data")
+       return (i)
     }
     data <- x$get()
-    invmtrx <- solve(data, ...)
-    x$setInverse (invmtrx)
-    invmtrx
+    i <- solve(data, ...)
+    x$setInverse (i)
+    i
 	
 }
